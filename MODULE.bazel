@@ -1,0 +1,9 @@
+"""RMLUI Module."""
+
+module(name = "rmlui", version = "6.0.0")
+
+bazel_dep(name = "rules_cc", version = "0.0.8")
+bazel_dep(name = "freetype", version = "2.13.2")
+
+git_override(module_name = "freetype", remote = "https://github.com/JoyTeam/freetype.git", commit = "b37bd95efa09ae01de00f74006c2e70f1adae467")
+#local_path_override(module_name = "freetype", path = "../freetype")

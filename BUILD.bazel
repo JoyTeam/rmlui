@@ -1,0 +1,22 @@
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
+cc_library(
+    name = "rmlui",
+    srcs = glob(
+        [
+            "Source/Core/**/*.cpp",
+            "Source/Core/**/*.h",
+            "Source/Core/**/*.inl",
+        ],
+    ),
+    defines = [
+        "RMLUI_STATIC_LIB",
+    ],
+    includes = [
+        "Include",
+    ],
+    visibility = ["//visibility:public"],
+    deps = [
+        "@freetype",
+    ],
+)

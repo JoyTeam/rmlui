@@ -31,3 +31,5 @@ Win32/
 x64/
 CMakeSettings.json
 compile_commands.json
+
+/bazel-*
